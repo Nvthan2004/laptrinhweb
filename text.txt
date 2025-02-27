@@ -1,0 +1,1 @@
+Đây là file text.txt của branch mergre_branch
