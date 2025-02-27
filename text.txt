@@ -1,1 +1,1 @@
-Đây là file text.txt của branch mergre_branch
+đây là file thuộc branch main và branch test_conflict
