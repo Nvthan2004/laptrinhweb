@@ -1,3 +1,0 @@
-[submodule "example-app"]
-	path = example-app
-	url = ../../tailieuweb/training-laravel.git
