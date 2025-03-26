@@ -197,7 +197,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\storage\\framework/cache/data',
+        'path' => 'C:\\xampp\\laptrinhweb\\example-app\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -370,13 +370,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\storage\\app',
+        'root' => 'C:\\xampp\\laptrinhweb\\example-app\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\storage\\app/public',
+        'root' => 'C:\\xampp\\laptrinhweb\\example-app\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -396,7 +396,7 @@
     ),
     'links' => 
     array (
-      'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\public\\storage' => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\storage\\app/public',
+      'C:\\xampp\\laptrinhweb\\example-app\\public\\storage' => 'C:\\xampp\\laptrinhweb\\example-app\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -435,13 +435,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\laptrinhweb\\example-app\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\laptrinhweb\\example-app\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -493,7 +493,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\laptrinhweb\\example-app\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -559,7 +559,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\resources\\views/vendor/mail',
+        0 => 'C:\\xampp\\laptrinhweb\\example-app\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -666,7 +666,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\storage\\framework/sessions',
+    'files' => 'C:\\xampp\\laptrinhweb\\example-app\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -686,9 +686,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\resources\\views',
+      0 => 'C:\\xampp\\laptrinhweb\\example-app\\resources\\views',
     ),
-    'compiled' => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app\\storage\\framework\\views',
+    'compiled' => 'C:\\xampp\\laptrinhweb\\example-app\\storage\\framework\\views',
   ),
   'flare' => 
   array (
@@ -774,7 +774,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'C:\\xampp\\htdocs\\laptrinhweb\\example-app',
+    'remote_sites_path' => 'C:\\xampp\\laptrinhweb\\example-app',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
