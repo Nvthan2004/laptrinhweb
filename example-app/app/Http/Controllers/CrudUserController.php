@@ -119,6 +119,8 @@ class CrudUserController extends Controller
 
        $user = User::find($input['id']);
        $user->name = $input['name'];
+       $user->phone = $input['phone'];
+       $user->address = $input['address'];
        $user->email = $input['email'];
        $user->password = $input['password'];
        $user->save();
