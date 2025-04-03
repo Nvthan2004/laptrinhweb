@@ -60,6 +60,8 @@ class CrudUserController extends Controller
 
         $user = User::create([
             'username' => $request->username,
+            'like' => $request->username,
+            'facebbook' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
@@ -113,6 +115,8 @@ class CrudUserController extends Controller
 
        $user = User::find($input['id']);
        $user->username = $request->username;
+       $user->like = $request->like;
+       $user->facebook = $request->facebook;
        $user->email = $request->email;
        
        if (!empty($request->password)) {
