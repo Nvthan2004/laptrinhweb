@@ -56,12 +56,17 @@ class CrudUserController extends Controller
             'username' => 'required|unique:users',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6|confirmed',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validate the image
+
         ]);
+       
+        $imagePath = $request->file('image')->store('avatars', 'public');
 
         $user = User::create([
             'username' => $request->username,
-            'like' => $request->username,
-            'facebbook' => $request->username,
+            'like' => $request->like,
+            'facebook' => $request->facebook,
+            'image' => $request->image,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
@@ -117,6 +122,7 @@ class CrudUserController extends Controller
        $user->username = $request->username;
        $user->like = $request->like;
        $user->facebook = $request->facebook;
+       $user->image = $request->image;
        $user->email = $request->email;
        
        if (!empty($request->password)) {

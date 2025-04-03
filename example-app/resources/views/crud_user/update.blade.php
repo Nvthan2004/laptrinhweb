@@ -30,7 +30,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Facebook</label>
-                                <input type="text" class="form-control" name="facebook" value="{{ $user->ufacebookername }}" required>
+                                <input type="text" class="form-control" name="facebook" value="{{ $user->facebook }}" required>
                                 @error('facebook')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -55,6 +55,14 @@
                             <div class="mb-3">
                                 <label class="form-label">Nhập lại Mật Khẩu</label>
                                 <input type="password" class="form-control" name="password_confirmation">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Link Hình Ảnh</label>
+                                <input type="text" class="form-control" name="image" value="{{ $user->image }}" required>
+                                @error('image')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="d-grid">

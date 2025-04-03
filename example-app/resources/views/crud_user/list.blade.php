@@ -20,6 +20,8 @@
                         <tr>
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $user->username }}</td>
+                            <td>{{ $user->like }}</td>
+                            <td>{{ $user->facebook }}</td>
                             <td>{{ $user->email }}</td>
                             <td>
                                 <a href="{{ route('user.readUser', ['id' => $user->id]) }}" class="btn btn-info btn-sm">View</a>

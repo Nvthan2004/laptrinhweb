@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('username',100);
             $table->string('like',100);
             $table->string('facebook',100);
+            $table->string('image',100);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
