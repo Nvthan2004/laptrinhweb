@@ -26,11 +26,11 @@ class CrudUserController extends Controller
     public function authUser(Request $request)
     {
         $request->validate([
-            'username' => 'required',
+            'name' => 'required',
             'password' => 'required',
         ]);
     
-        $credentials = $request->only('username', 'password');
+        $credentials = $request->only('name', 'password');
         if (Auth::attempt($credentials)) {
          
             return redirect()->intended('list')->withSuccess('Signed in');
@@ -53,20 +53,15 @@ class CrudUserController extends Controller
     public function postUser(Request $request)
     {
         $request->validate([
-            'username' => 'required|unique:users',
+            'name' => 'required|unique:users',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6|confirmed',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validate the image
 
         ]);
        
-        $imagePath = $request->file('image')->store('avatars', 'public');
-
         $user = User::create([
-            'username' => $request->username,
-            'like' => $request->like,
-            'facebook' => $request->facebook,
-            'image' => $request->image,
+            'name' => $request->name,
+            
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
@@ -113,16 +108,14 @@ class CrudUserController extends Controller
         $input = $request->all();
 
         $request->validate([
-            'username' => 'required',
+            'name' => 'required',
             'email' => 'required|email|unique:users,id,'.$input['id'],
             'password' => 'required|min:6|confirmed',
         ]);
 
        $user = User::find($input['id']);
-       $user->username = $request->username;
-       $user->like = $request->like;
-       $user->facebook = $request->facebook;
-       $user->image = $request->image;
+       $user->name = $request->name;
+      
        $user->email = $request->email;
        
        if (!empty($request->password)) {
@@ -140,7 +133,7 @@ class CrudUserController extends Controller
     public function listUser()
     {
         if(Auth::check()){
-            $users = User::all();
+            $users = User::paginate(10);
             return view('crud_user.list', ['users' => $users]);
         }
 

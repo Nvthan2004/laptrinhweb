@@ -14,14 +14,9 @@
                                     <strong class="me-5">Id:</strong> {{$messi->id}}
                                 </div>
                                 <div class="ms-5 mb-3">
-                                    <strong class="me-5">Username:</strong> {{$messi->username}}
+                                    <strong class="me-5">Name:</strong> {{$messi->name}}
                                 </div>
-                                <div class="ms-5 mb-3">
-                                    <strong class="me-5">Like:</strong> {{$messi->like}}
-                                </div>
-                                <div class="ms-5 mb-3">
-                                    <strong class="me-5">Facebook:</strong> {{$messi->facebook}}
-                                </div>
+                               
                                 <div class="ms-5 mb-3">
                                     <strong class="me-5">Email:</strong> {{$messi->email}}
                                 </div>

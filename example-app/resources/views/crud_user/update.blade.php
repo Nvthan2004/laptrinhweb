@@ -13,28 +13,14 @@
                             <input type="hidden" name="id" value="{{ $user->id }}">
                             
                             <div class="mb-3">
-                                <label class="form-label">Username</label>
-                                <input type="text" class="form-control" name="username" value="{{ $user->username }}" required>
-                                @error('username')
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" name="name" value="{{ $user->name }}" required>
+                                @error('name')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">Like</label>
-                                <input type="text" class="form-control" name="like" value="{{ $user->like }}" required>
-                                @error('like')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Facebook</label>
-                                <input type="text" class="form-control" name="facebook" value="{{ $user->facebook }}" required>
-                                @error('facebook')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
+                           
 
                             <div class="mb-3">
                                 <label class="form-label">Email</label>

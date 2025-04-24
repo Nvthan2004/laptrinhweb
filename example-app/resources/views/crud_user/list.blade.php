@@ -8,10 +8,9 @@
                 <thead class="table-dark">
                     <tr>
                         <th>STT</th>
-                        <th>Username</th>
-                        <th>Like</th>
-                        <th>Facebook</th>
+                        <th>Name</th>
                         <th>Email</th>
+                        <th>Role</th>
                         <th>Thao Tác</th>
                     </tr>
                 </thead>
@@ -19,10 +18,15 @@
                     @foreach($users as $index => $user)
                         <tr>
                             <td>{{ $index + 1 }}</td>
-                            <td>{{ $user->username }}</td>
-                            <td>{{ $user->like }}</td>
-                            <td>{{ $user->facebook }}</td>
+                            <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
+                            <th>
+                                    @foreach($user->roles as $role)
+                                        <a href="{{ route('user.role', ['id' => $role->id]) }}">
+                                            {{ $role->name . '-' }}
+                                        </a>
+                                    @endforeach
+                                </th>
                             <td>
                                 <a href="{{ route('user.readUser', ['id' => $user->id]) }}" class="btn btn-info btn-sm">View</a>
                                 <a href="{{ route('user.updateUser', ['id' => $user->id]) }}" class="btn btn-warning btn-sm">Edit</a>
@@ -32,6 +36,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {!! $users->withQueryString()->links('pagination::bootstrap-5') !!}
         </div>
     </main>
 @endsection

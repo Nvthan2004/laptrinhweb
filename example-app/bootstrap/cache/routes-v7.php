@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::xYoQTCBShgYyAJdr',
+            '_route' => 'generated::Efsd8YSIbdYy09FQ',
           ),
           1 => NULL,
           2 => 
@@ -122,7 +122,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::JiOfhbSiRFWFxMxQ',
+            '_route' => 'generated::9YDqo5U9WuhpsaBb',
           ),
           1 => NULL,
           2 => 
@@ -324,13 +324,33 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/role' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.role',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::y3KYXTH96kGzbtla',
+            '_route' => 'generated::7DBpMXwDcVllWAkT',
           ),
           1 => NULL,
           2 => 
@@ -501,7 +521,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::xYoQTCBShgYyAJdr' => 
+    'generated::Efsd8YSIbdYy09FQ' => 
     array (
       'methods' => 
       array (
@@ -524,7 +544,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::xYoQTCBShgYyAJdr',
+        'as' => 'generated::Efsd8YSIbdYy09FQ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -540,7 +560,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::JiOfhbSiRFWFxMxQ' => 
+    'generated::9YDqo5U9WuhpsaBb' => 
     array (
       'methods' => 
       array (
@@ -561,7 +581,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::JiOfhbSiRFWFxMxQ',
+        'as' => 'generated::9YDqo5U9WuhpsaBb',
       ),
       'fallback' => false,
       'defaults' => 
@@ -944,7 +964,44 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::y3KYXTH96kGzbtla' => 
+    'user.role' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'role',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\RoleController@role',
+        'controller' => 'App\\Http\\Controllers\\RoleController@role',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'user.role',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::7DBpMXwDcVllWAkT' => 
     array (
       'methods' => 
       array (
@@ -960,13 +1017,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:44:"function () {
     return \\view(\'welcome\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005190000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000051a0000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::y3KYXTH96kGzbtla',
+        'as' => 'generated::7DBpMXwDcVllWAkT',
       ),
       'fallback' => false,
       'defaults' => 
